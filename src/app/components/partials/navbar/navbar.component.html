@@ -1,0 +1,36 @@
+<div class="app-header">
+  <div class="flex content-between items-center">
+    <div>
+      <span class="header-trigger" (click)="handleCollapse()">
+        <span
+          class="trigger"
+          nz-icon
+          [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        ></span>
+      </span>
+    </div>
+
+    <div>
+      <div
+        nz-popover
+        nzPopoverTitle=""
+        class="user-profile flex content-center items-center"
+        nzPopoverPlacement="bottom"
+      >
+        <!-- [nzPopoverContent]="popover_content" -->
+        <div class="user-img flex items-center">
+          <img
+            [src]="'../../../../assets/default-img/user-profile-img.png'"
+            onError="this.src='../../../../assets/default-img/user-profile-img.png'"
+            alt="Avatar"
+          />
+        </div>
+
+        <div class="user-info">
+          <h4>Pranto Shikder</h4>
+          <p>500.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

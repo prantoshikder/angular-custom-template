@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-layout {
+  min-height: 100vh;
+
+  .menu-sidebar {
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    overflow: auto;
+    height: 100%;
+    left: 0;
+    background-color: #07005b;
+    transition: all 0.3s linear;
+  }
+
+  .right-layout {
+    margin-left: 256px;
+    transition: all 0.3s linear;
+
+    &.active-right-layout {
+      margin-left: 80px;
+      transition: all 0.3s linear;
+
+      .header-wrapper {
+        min-width: calc(100% - 80px);
+      }
+    }
+
+    .header-wrapper {
+      position: fixed;
+      padding: 0;
+      // width: 100%;
+      z-index: 1000 !important;
+      background-color: #07005b;
+      min-width: calc(100% - 256px);
+    }
+
+    .main-container {
+      margin: 24px;
+      margin-top: 90px;
+
+      .inner-content {
+        padding: 24px;
+        background: #fff;
+        height: 100%;
+      }
+    }
+  }
+}
